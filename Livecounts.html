@@ -11,18 +11,12 @@
         background-color: #1b1b1b;
     }
     
-/* ========================================= */
-    /* [!] FINAL FONT & READABILITY OVERRIDE     */
-    /* ========================================= */
-    
-    /* Force-load a clean mono font for the terminal vibe */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap'); 
 
     #migration-overlay {
         position: fixed; inset: 0; background: rgba(0, 0, 0, 0.9);
         display: none; align-items: center; justify-content: center; z-index: 100000;
         padding: 20px; 
-        /* FIXED: Correct property name from your error log */
         backdrop-filter: blur(10px); 
         -webkit-backdrop-filter: blur(10px);
     }
@@ -44,7 +38,6 @@
         align-self: stretch !important; font-weight: 400 !important;
     }
 
-    /* ACCESS BUTTON: With Glow Effect */
     #migration-overlay .btn-main {
         display: block !important; width: 100% !important; 
         background: #10b981 !important; color: #000 !important; 
@@ -59,11 +52,9 @@
     #migration-overlay .btn-main:hover { 
         background: #14d394 !important; 
         transform: translateY(-2px) !important;
-        /* THE GLOW: Clean emerald radiation */
         box-shadow: 0 0 20px rgba(16, 185, 129, 0.6) !important;
     }
 
-    /* ANIMATED CHECKBOX */
     .checkbox-row { 
         display: flex !important; align-items: center !important; 
         justify-content: center !important; gap: 10px !important; 
@@ -79,7 +70,7 @@
 
     #dontShow:checked {
         background: #10b981; border-color: #10b981;
-        transform: scale(1.1); /* Pop animation */
+        transform: scale(1.1);
     }
 
     #dontShow:checked::after {
@@ -92,27 +83,21 @@
         border: none !important;
         box-shadow: none !important;
         outline: none !important;
-        
-        /* UPDATED: Increased size and spacing */
         color: #666 !important; 
         cursor: pointer !important; 
         display: block !important; 
         margin: 25px auto 0 !important; 
-        font-size: 13px !important; /* Bumped from 10px */
+        font-size: 13px !important;
         text-decoration: underline !important;
         font-family: 'JetBrains Mono', monospace !important;
         font-weight: 400 !important;
         width: auto !important;
         height: auto !important;
-        padding: 10px 20px !important; /* Added more clickable area */
+        padding: 10px 20px !important;
         transition: color 0.2s ease !important;
     }
 
     #migration-overlay .btn-close:hover { color: #ff3333 !important; }
-
-        /* ========================================= */
-    /* [!] SYSTEM MIGRATION BANNER               */
-    /* ========================================= */
     .migration-banner {
         background: #0a0a0f;
         border-bottom: 2px solid #ff3333;
@@ -206,16 +191,12 @@
     with <b>@RHStatistics</b> has been transitioned to the <b>BlazePixel</b> 
     development environment.
 </p>
-                <div class="terminal-box">
-                    <div style="color: #666;">> REASON: End of Life (EOL), No Development plans Or Ideas...</div>
-                    <div style="color: #10b981;">> TARGET: KALEIDO v1.2.0 (Active)</div>
-                </div>
-                <a href="https://blazepixel76.github.io/BlazeWebsite/" class="btn-main" onclick="handleMigration()">ACCESS BLAZEPIXEL WEBSITE</a>
+                <a href="https://blazepixel76.github.io/BlazeWebsite/" class="btn-main" onclick="handleMigration()">Go To New Website</a>
                 <div class="checkbox-row">
                     <input type="checkbox" id="dontShow">
                     <label for="dontShow">Do not show this Popup alert again</label>
                 </div>
-                <button class="btn-close" onclick="closePopup()">Dismiss and stay on legacy</button>
+                <button class="btn-close" onclick="closePopup()">Dismiss and stay For Now</button>
             </div>
         </div>
 
